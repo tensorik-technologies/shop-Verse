@@ -1,0 +1,82 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  grid-auto-flow: dense;
+  align-items: start;
+  max-width: 100%;
+}
+
+.product-grid__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+/* Large Desktop - 4 columns (only when sidebar isn't constraining) */
+@media (min-width: 1600px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+/* Medium Desktop/Tablet Landscape */
+@media (max-width: 1199px) and (min-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* Small Tablet - 2 columns */
+@media (max-width: 899px) and (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Mobile - 2 columns (sidebar is collapsed, full width available) */
+@media (max-width: 599px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+/* Very small mobile - 1 column */
+@media (max-width: 400px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-base);
+  }
+}
+
+/* Ensure spotlight cards work correctly at different breakpoints */
+@media (max-width: 1024px) {
+  .product-card--spotlight {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+/* Smooth layout transitions */
+.product-grid > * {
+  animation-fill-mode: both;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .product-grid {
+    animation: none !important;
+  }
+  
+  .product-grid > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

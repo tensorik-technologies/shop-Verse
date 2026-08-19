@@ -1,0 +1,51 @@
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-track {
+  width: 56px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 2px solid var(--color-border);
+}
+
+.toggle-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .toggle-track {
+    width: 48px;
+    height: 26px;
+  }
+
+  .toggle-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .toggle-icon {
+    font-size: 12px;
+  }
+}
