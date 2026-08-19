@@ -109,7 +109,7 @@
 [data-theme="dark"] {
   --color-primary: #7C71FF;
   --color-primary-hover: #9890FF;
-  --color-primary-light: rgba(124, 113, 255, 0.15);
+  --color-primary-light: rgba(124, 113, 254, 0.15);
   
   --color-accent-cta: #FF8559;
   --color-accent-cta-hover: #FF9B77;
